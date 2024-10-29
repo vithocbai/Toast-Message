@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#toast {
+    position: fixed;
+    top: 16px;
+    right: 30px;
+}
+
+.toast {
+    padding: 16px 6px;
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    max-width: 450px;
+    margin: 16px 0;
+    background-color: white;
+    border-left: 4px solid black;
+    transition: all linear 0.3s;
+}
+
+@keyframes slideToRight {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 30px));
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    background-color: rgb(205, 227, 205) !important;
+    border-left: 4px solid rgb(12, 185, 12) !important;
+}
+
+.toast--error {
+    background-color: rgb(205, 130, 130) !important;
+    border-left: 4px solid  red !important;
+}
+
+.toast--warning {
+    background-color: rgb(234, 234, 116) !important;
+      border-left: 4px solid  yellow !important;
+}
+
+.toast__icon.toast__icon--success {
+    color: white;
+}
+
+.toast__icon.toast__icon--error {
+    color: white;
+}
+
+.toast__icon.toast__icon--warning {
+    color: white;
+}
+
+.toast_content {
+    margin-right: 10px;
+}
+
+.toast__icon {
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+.toast__title {
+    font-size: 1.8rem;
+}
+
+.toast_desc {
+    font-size: 1.6rem;
+}
+
+.toast_close {
+    margin-left: auto;
+    font-size: 2rem;
+    color: #888484;
+}
+
+.group-btn {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.btn {
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 20px;
+    color: white;
+    min-width: 180px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn.btn--success {
+    background-color: green;
+}
+
+.btn.btn--danger {
+    background-color: red;
+}
+
+.btn.btn--warning {
+    background-color: rgb(233, 233, 57);
+}
